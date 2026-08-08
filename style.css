@@ -37,7 +37,7 @@ iframe {
 
 body {
     background-color: var(--primary-bg-color);
-    margin: 25 200 25 200
+    margin: 0 20% 0 20%;
 }
 
 /* -------- navbar -------- */
