@@ -2,42 +2,63 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --primary-bg-color: white;
+        --primary-bg-color: #fff7e9;
         --primary-color: black;
 
-        --content-bg-color: #d6d6d6;
+        --bar-color: #c5c5c5;
+        --bar-hover-color: #afafaf;
+        --accent-color: #a361b9;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-bg-color: #181818;
+        --primary-bg-color: #22201d;
         --primary-color: white;
 
-        --content-bg-color: #3f3f3f;
+        --bar-color: #3f3f3f;
+        --bar-hover-color: #696969;
+        --accent-color: #44284d;
     }
 }
 
 /* -------- main css stuff? -------- */
 
-* :not(body) {
+* {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--primary-color);
-    /* animation: 500ms ease-in fadeIn; */
-}
-
-h1 {
-    color: var(--primary-color);
-}
-
-iframe {
-    width: 100%;
-    /* border: none; */ /*TODO uncomment when ready*/
 }
 
 body {
     background-color: var(--primary-bg-color);
     margin: 0 20% 0 20%;
+    color: var(--primary-color);
+}
+
+/* body > *{
+    color: var(--primary-color);
+    animation: 500ms both ease-in fadeIn;
+} */
+
+h1 {
+    color: var(--primary-color);
+    animation: 200ms 150ms both ease-in fadeIn;
+}
+
+p {
+    color: var(--primary-color);
+    animation: 200ms 200ms both ease-in fadeIn;
+}
+
+p *{
+    color: var(--primary-color);
+    animation: 200ms 200ms both ease-in fadeIn;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 0;
+    animation: 200ms 250ms both ease-in fadeIn;
 }
 
 /* -------- navbar -------- */
@@ -48,42 +69,83 @@ ul.navbar {
     padding: 0;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-bg-color);
+    background-color: var(--bar-color);
 }
 
 ul.navbar li {
-  display: block;
-  color: var(--primary-color);
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: var(--primary-color);
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 ul.navbar li:hover {
-  background-color: var(--content-bg-color);
-  color: var(--primary-color);
+    background-color: var(--bar-hover-color);
+    /* color: var(--primary-color); */
 } 
+
+.current {
+    background-color: var(--accent-color);
+}
+
+/* -------- project widgets -------- */
+
+.projectBox {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 2%;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 45% 45%;
+}
+
+.project > h3 {
+    color: var(--primary-color);
+    margin-bottom: 0;
+    animation: 200ms 400ms both ease-in fadeIn;
+}
+
+.project > a{
+    color: var(--primary-color);
+    animation: 200ms 450ms both ease-in fadeIn;
+}
+
+.project > p {
+    color: var(--primary-color);
+    animation: 200ms 500ms both ease-in fadeIn;
+}
 
 /* -------- footer -------- */
 
 footer {
-    background-color: var(--content-bg-color);
-    animation: 500ms ease-in fadeIn;
-    margin: 0 20% 0 20%;
+    background-color: var(--bar-color);
+    padding: 0 20% 0 20%;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+footer a {
+    display: block;
+    color: var(--primary-color);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    background-color: var(--bar-hover-color);
 }
 
 /* -------- ANIMATIONS --------- */
 
 @keyframes fadeIn {
     from {
-        background-color: var(--primary-bg-color);
+        /* background-color: var(--primary-bg-color); */
         color: var(--primary-bg-color);
     }
 
     to {
-        background-color: var(--content-bg-color);
+        /* background-color: var(--bar-color); */
         color: var(--primary-color);
     }
 }
