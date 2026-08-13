@@ -141,11 +141,13 @@ footer a:hover {
 @keyframes fadeIn {
     from {
         /* background-color: var(--primary-bg-color); */
+        opacity: 0;
         color: var(--primary-bg-color);
     }
 
     to {
         /* background-color: var(--bar-color); */
+        opacity: 1;
         color: var(--primary-color);
     }
 }
