@@ -98,15 +98,24 @@ ul.navbar li:hover {
     grid-template-columns: 45% 45%;
 }
 
-.project > h3 {
+.project h3 {
     color: var(--primary-color);
     margin-bottom: 0;
     animation: 200ms 400ms both ease-in fadeIn;
 }
 
 .project > a{
+    color: var(--bar-hover-color);
+    animation: 200ms 450ms both ease-in fadeIn;
+}
+
+.project > a:visited{
     color: var(--primary-color);
     animation: 200ms 450ms both ease-in fadeIn;
+}
+
+.project > a:active{
+    color: var(--accent-color);
 }
 
 .project > p {
