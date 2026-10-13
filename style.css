@@ -31,7 +31,7 @@
 
 @media (orientation: landscape){
     .content, .navbar, footer{
-        margin: 0 20% 0 20%;
+        margin: 0 15% 0 15%;
     }
 }
 
@@ -109,6 +109,26 @@ ul.navbar li:hover {
         /* grid-gap: 2%;
         grid-template-rows: 50% 50% 50%;
         grid-template-columns: 100%; */
+    }
+
+    h1{
+        font-size: 9vw;
+    }
+
+    h2{
+        font-size: 6vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
+    p{
+        font-size: 4vw;
+    }
+
+    a{
+        font-size: 4vw;
     }
 }
 
