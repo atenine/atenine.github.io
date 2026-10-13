@@ -22,6 +22,19 @@
     }
 }
 
+/* -------- alignment idk   -------- */
+@media (orientation: portrait){
+    .content {
+        margin: 0 5% 0 5%;
+    }
+}
+
+@media (orientation: landscape){
+    .content, .navbar, footer{
+        margin: 0 20% 0 20%;
+    }
+}
+
 /* -------- main css stuff? -------- */
 
 * {
@@ -30,10 +43,9 @@
 }
 
 body {
-    background-color: var(--primary-bg-color);
-    margin: 0 20% 0 20%;
-    color: var(--primary-color);
-}
+        background-color: var(--primary-bg-color);
+        color: var(--primary-color);
+    }
 
 /* body > *{
     color: var(--primary-color);
@@ -90,12 +102,24 @@ ul.navbar li:hover {
 
 /* -------- project widgets -------- */
 
-.projectBox {
-    display: grid;
-    grid-auto-flow: row;
-    grid-gap: 2%;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 45% 45%;
+@media (orientation: portrait){
+    .projectBox {
+        display: flex;
+        flex-direction: column;
+        /* grid-gap: 2%;
+        grid-template-rows: 50% 50% 50%;
+        grid-template-columns: 100%; */
+    }
+}
+
+@media (orientation: landscape){
+    .projectBox {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 2%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 45% 45%;
+    }
 }
 
 .project h3 {
@@ -127,7 +151,7 @@ ul.navbar li:hover {
 
 footer {
     background-color: var(--bar-color);
-    padding: 0 20% 0 20%;
+    padding: 0 10% 0 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
