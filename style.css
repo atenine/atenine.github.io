@@ -47,14 +47,15 @@ body {
         color: var(--primary-color);
     }
 
-/* body > *{
+h1 { 
     color: var(--primary-color);
-    animation: 500ms both ease-in fadeIn;
-} */
+    animation: sweepRight 2s ease;
+    overflow: hidden;
+}
 
-h1 {
-    color: var(--primary-color);
-    animation: 200ms 150ms both ease-in fadeIn;
+h1 span {
+    animation: sweepLeft 2s ease;
+    display: block;
 }
 
 p {
@@ -70,7 +71,12 @@ p *{
 h2 {
     color: var(--primary-color);
     margin-bottom: 0;
-    animation: 200ms 250ms both ease-in fadeIn;
+    animation: 200ms 250ms both ease-in rotateIn;
+}
+
+hr {
+    color: var(--primary-color);
+    animation: 200ms 250ms both ease-in rotateIn;
 }
 
 /* -------- navbar -------- */
@@ -202,5 +208,39 @@ footer a:hover {
         /* background-color: var(--bar-color); */
         opacity: 1;
         color: var(--primary-color);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        /* transform: translateX(100%); */
+        opacity: 0;
+        rotate: 0 5 0 45deg;
+    }
+
+
+    to{
+        /* transform: translateX(0);  */
+        opacity: 1;
+    }
+}
+
+@keyframes sweepLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes sweepRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0); 
     }
 }
