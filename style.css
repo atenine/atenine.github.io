@@ -58,6 +58,17 @@ h1 span {
     display: block;
 }
 
+.bar { 
+    color: var(--primary-color);
+    animation: sweepRight 750ms 250ms both cubic-bezier(0.1, 0.5, 0.7, 1.0);
+    overflow: hidden;
+}
+
+.bar span {
+    animation: sweepLeft 750ms 250ms both cubic-bezier(0.1, 0.5, 0.7, 1.0);
+    display: block;
+}
+
 p {
     color: var(--primary-color);
     animation: 200ms 200ms both ease-in fadeIn;
@@ -71,12 +82,11 @@ p *{
 h2 {
     color: var(--primary-color);
     margin-bottom: 0;
-    animation: 200ms 250ms both ease-in rotateIn;
+    animation: 200ms 200ms both ease-in fadeIn;
 }
 
 hr {
     color: var(--primary-color);
-    animation: 200ms 250ms both ease-in rotateIn;
 }
 
 /* -------- navbar -------- */
@@ -106,7 +116,7 @@ ul.navbar li:hover {
     background-color: var(--accent-color);
 }
 
-/* -------- project widgets -------- */
+/* -------- portrait configuration -------- */
 
 @media (orientation: portrait){
     .projectBox {
@@ -151,7 +161,13 @@ ul.navbar li:hover {
 .project h3 {
     color: var(--primary-color);
     margin-bottom: 0;
-    animation: 200ms 400ms both ease-in fadeIn;
+    animation: 500ms 300ms both ease sweepRight;
+    overflow: hidden;
+}
+
+.project h3 span {
+    animation: 500ms 300ms both ease sweepLeft;
+    display: block;
 }
 
 .project > a{
@@ -211,19 +227,17 @@ footer a:hover {
     }
 }
 
-@keyframes rotateIn {
+/* @keyframes rotateIn {
     from {
-        /* transform: translateX(100%); */
         opacity: 0;
         rotate: 0 5 0 45deg;
     }
 
 
     to{
-        /* transform: translateX(0);  */
         opacity: 1;
     }
-}
+} */
 
 @keyframes sweepLeft {
     from {
