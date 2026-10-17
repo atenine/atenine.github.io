@@ -216,7 +216,7 @@ footer a:hover {
 @keyframes fadeIn {
     from {
         /* background-color: var(--primary-bg-color); */
-        opacity: 0;
+        opacity: 0.5;
         color: var(--primary-bg-color);
     }
 
