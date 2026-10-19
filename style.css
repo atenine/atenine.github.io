@@ -79,6 +79,17 @@ p *{
     animation: 200ms 200ms both ease-in fadeIn;
 }
 
+ul {
+    list-style-type: disc;
+    padding: 0px 0 !important;
+    padding-left: 20px !important;
+}
+
+ul:not(.navbar) li {
+    color: var(--primary-color);
+    animation: 200ms 200ms both ease-in fadeIn;
+}
+
 h2 {
     color: var(--primary-color);
     margin-bottom: 0;
