@@ -154,18 +154,33 @@ ul.navbar li:hover {
         font-size: 4vw;
     }
 
+    li{
+        font-size: 4vw;
+    }
+
     a{
         font-size: 4vw;
     }
 }
 
 @media (orientation: landscape){
-    .projectBox {
+    /* .projectBox {
         display: grid;
         grid-auto-flow: row;
         grid-gap: 2%;
         grid-template-rows: 50% 50%;
         grid-template-columns: 45% 45%;
+    } */
+
+    .projectBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        flex: 1 0 34%;
+        padding: 0 3% 0 0;
     }
 }
 
@@ -181,23 +196,29 @@ ul.navbar li:hover {
     display: block;
 }
 
-.project > a{
+.project a{
     color: var(--bar-hover-color);
     animation: 200ms 450ms both ease-in fadeIn;
 }
 
-.project > a:visited{
+.project a:visited{
     color: var(--primary-color);
     animation: 200ms 450ms both ease-in fadeIn;
 }
 
-.project > a:active{
+.project a:active{
     color: var(--accent-color);
 }
 
-.project > p {
+.project p {
     color: var(--primary-color);
     animation: 200ms 500ms both ease-in fadeIn;
+}
+
+.project > img {
+    width: 12em;
+    height: auto;
+    animation: 200ms 500ms both ease-in rotateIn;
 }
 
 /* -------- footer -------- */
@@ -240,13 +261,10 @@ footer a:hover {
 
 /* @keyframes rotateIn {
     from {
-        opacity: 0;
-        rotate: 0 5 0 45deg;
+        rotate: 0 5 0 90deg;
     }
 
-
     to{
-        opacity: 1;
     }
 } */
 
